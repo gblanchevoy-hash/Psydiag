@@ -1,0 +1,241 @@
+{
+  "id": "hypomanie_alexandre_v1",
+  "meta": {
+    "titre": "Trouble bipolaire — Phase hypomaniaque",
+    "categorie": "Troubles de l'humeur",
+    "difficulte": "intermediaire",
+    "duree_estimee": 20,
+    "version": "1.0.0",
+    "reference_cim11": "6A60",
+    "auteur": "Psydiag",
+    "date_creation": "2025-01"
+  },
+  "patient": {
+    "prenom": "Alexandre",
+    "age": 38,
+    "genre": "M",
+    "avatar_initiales": "A",
+    "avatar_couleur": "#C67C3A",
+    "contexte_socioprofessionnel": "Chef de projet marketing, marié, deux enfants. Antécédent d'un épisode dépressif traité il y a 4 ans. Suivi interrompu depuis 2 ans.",
+    "motif_consultation": "Adressé par son médecin traitant à la demande de sa femme, inquiète de ses changements de comportement depuis 3 semaines.",
+    "antecedents": "Episode dépressif caractérisé à 34 ans, traité par antidépresseur. Arrêt du traitement de lui-même. Pas de diagnostic bipolaire posé à ce jour.",
+    "presentation_physique": {
+      "tenue": "Costume coloré, cravate vive — inhabituel selon sa femme. Bien soigné mais un excès de détails vestimentaires",
+      "posture": "Expansive, occupe l'espace, gestes amples",
+      "contact_visuel": "Direct, soutenu, parfois envahissant",
+      "debit_parole": "Rapide, logorrhéique, coupe facilement la parole",
+      "tonalite_emotionnelle": "Euphorie, optimisme excessif, irritabilité latente si frustré",
+      "cooperation": "Superficiellement bonne — mais faible insight sur ses difficultés",
+      "mecanismes_defensifs": "Minimisation, rationalisation, irritabilité si remis en question",
+      "particularites_relationnelles": "Cherche l'adhésion de l'interlocuteur à ses projets, peut devenir irritable si le clinicien ne valide pas",
+      "evolution_entretien": "Si cadre maintenu : peut accéder à une légère conscience des conséquences. Si confrontation directe : irritabilité ou rupture de coopération."
+    }
+  },
+  "scoring": {
+    "dimensions": ["alliance", "ecoute", "validation", "exploration", "rythme", "directivite", "silence", "securisation"],
+    "depart": {
+      "alliance": 40,
+      "ecoute": 50,
+      "validation": 50,
+      "exploration": 50,
+      "rythme": 50,
+      "directivite": 30,
+      "silence": 50,
+      "securisation": 40
+    },
+    "seuil_rupture_alliance": 5,
+    "seuil_succes": 60
+  },
+  "etapes": [
+    {
+      "id": "E01",
+      "titre": "Entrée dynamique",
+      "contexte_clinique": "Alexandre entre rapidement, vous serre vigoureusement la main, s'assoit en avant sur sa chaise. Il commence à parler avant même que vous ayez pu dire un mot.",
+      "emotion_patient": "euphoria",
+      "indicateur_emotion": "Euphorie — énergie élevée",
+      "dialogue": "Bonjour docteur ! Je vous préviens tout de suite : je suis là parce que ma femme insiste, mais franchement je me suis jamais senti aussi bien de ma vie. J'ai des projets incroyables en ce moment.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E01_A",
+          "texte": "Je vous entends. Et je suis content que vous soyez là malgré tout. Vous pouvez me parler de comment vous vous sentez en ce moment ?",
+          "qualite": "excellent",
+          "delta": {"alliance": 8, "ecoute": 8, "validation": 5, "rythme": 5},
+          "feedback": "Bien. Vous validez sa présence sans entrer en conflit sur sa perception ('je me suis jamais senti aussi bien'), et vous ouvrez l'exploration de son état actuel. Pas de confrontation prématurée.",
+          "suite": "E02"
+        },
+        {
+          "id": "E01_B",
+          "texte": "C'est justement ce sentiment de se sentir 'au top' qui inquiète votre femme. Parlons-en.",
+          "qualite": "neutre",
+          "delta": {"alliance": -3, "ecoute": -3, "directivite": 8},
+          "feedback": "Vous vous alignez d'emblée sur l'inquiétude de sa femme. Alexandre va sentir qu'il est venu pour être 'remis en question', ce qui risque d'activer l'irritabilité latente plutôt que la réflexion.",
+          "suite": "E02"
+        },
+        {
+          "id": "E01_C",
+          "texte": "Ces projets dont vous parlez — c'est quoi exactement ?",
+          "qualite": "bien",
+          "delta": {"alliance": 5, "exploration": 10, "ecoute": 5},
+          "feedback": "Bien. Vous suivez son agenda (les projets) et explorez le contenu. Ça peut sembler valider l'euphorie, mais explorer les projets permet d'évaluer leur réalisme et les conséquences fonctionnelles — ce qui est cliniquement utile.",
+          "suite": "E02"
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "titre": "Les projets",
+      "contexte_clinique": "Alexandre se penche en avant avec enthousiasme.",
+      "emotion_patient": "euphoria",
+      "indicateur_emotion": "Euphorie — logorrhée",
+      "dialogue": "J'ai trois projets en parallèle : une startup dans l'IA, un livre que je commence à écrire, et j'ai proposé à ma femme qu'on rachète un appartement pour le louer. J'ai besoin de 4 heures de sommeil max en ce moment, c'est incroyable l'énergie que j'ai.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E02_A",
+          "texte": "Trois projets simultanés, et quatre heures de sommeil suffisent — comment votre entourage vit-il tout ça ?",
+          "qualite": "excellent",
+          "delta": {"alliance": 8, "exploration": 12, "ecoute": 8, "rythme": 5},
+          "feedback": "Excellente manœuvre. Vous ne confrontez pas directement les projets ou le sommeil réduit, mais vous ouvrez la question des conséquences relationnelles et fonctionnelles. C'est le chemin le plus direct vers une prise de conscience sans provoquer l'irritabilité.",
+          "suite": "E03"
+        },
+        {
+          "id": "E02_B",
+          "texte": "Quatre heures de sommeil ce n'est pas normal — c'est un symptôme important.",
+          "qualite": "maladroit",
+          "delta": {"alliance": -10, "directivite": 12, "validation": -8},
+          "feedback": "Confrontation directe et prématurée. Alexandre va aussitôt rationaliser ('je suis juste en pleine forme') et se braquer. Le mot 'symptôme' active la résistance au diagnostic.",
+          "suite": "E03"
+        },
+        {
+          "id": "E02_C",
+          "texte": "C'est impressionnant toute cette énergie. Ces projets sont à quel stade ?",
+          "qualite": "neutre",
+          "delta": {"alliance": 3, "exploration": 8, "validation": 5},
+          "feedback": "Vous suivez l'agenda du patient et explorez la réalité des projets. Utile pour évaluer le niveau de réalisme, mais le mot 'impressionnant' peut renforcer l'euphorie plutôt que l'inviter à la réflexion.",
+          "suite": "E03"
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "titre": "L'impact relationnel",
+      "contexte_clinique": "Alexandre balaye légèrement d'un geste.",
+      "emotion_patient": "irritability_mild",
+      "indicateur_emotion": "Légère irritabilité — résistance au questionnement",
+      "dialogue": "Ma femme est trop anxieuse. Elle comprend pas que parfois on a des périodes où tout s'accélère. C'est pas un problème, c'est une chance. Les enfants, eux, ils adorent — je joue avec eux jusqu'à minuit !",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E03_A",
+          "texte": "Jouer jusqu'à minuit avec vos enfants — quel âge ont-ils ?",
+          "qualite": "excellent",
+          "delta": {"alliance": 5, "exploration": 12, "ecoute": 8},
+          "feedback": "Stratégique. En demandant l'âge des enfants, vous amenez Alexandre à réaliser lui-même que jouer avec des enfants jusqu'à minuit peut poser un problème — sans avoir besoin de le dire. C'est une exploration indirecte des conséquences, beaucoup plus efficace que la confrontation.",
+          "suite": "E04"
+        },
+        {
+          "id": "E03_B",
+          "texte": "Des enfants qui dorment tard à cause de l'humeur du père, c'est un impact concret sur leur santé.",
+          "qualite": "maladroit",
+          "delta": {"alliance": -12, "directivite": 15, "validation": -10},
+          "feedback": "⚠️ Confrontation trop directe qui risque la rupture. Alexandre va se sentir jugé comme mauvais père et devenir défensif ou irritable. La critique de la parentalité est particulièrement sensible.",
+          "suite": "E04"
+        },
+        {
+          "id": "E03_C",
+          "texte": "Vous avez l'impression que votre femme ne partage pas votre enthousiasme en ce moment ?",
+          "qualite": "bien",
+          "delta": {"alliance": 8, "exploration": 8, "ecoute": 8},
+          "feedback": "Bien. Vous explorez le décalage relationnel sans confronter. Alexandre peut commencer à percevoir la friction conjugale sans se sentir attaqué.",
+          "suite": "E04"
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "titre": "L'antécédent dépressif",
+      "contexte_clinique": "Alexandre marque une légère pause pour la première fois.",
+      "emotion_patient": "mixed_hope_fatigue",
+      "indicateur_emotion": "Légère fissure dans l'euphorie",
+      "dialogue": "Bon… ma femme dit que la dernière fois j'avais aussi une période comme ça et après j'ai fait une grosse dépression. Mais c'était différent.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E04_A",
+          "texte": "Elle se souvient de cette période. Et vous — qu'est-ce que vous vous rappelez de comment c'était après cette phase d'énergie, il y a quatre ans ?",
+          "qualite": "excellent",
+          "delta": {"alliance": 12, "exploration": 12, "ecoute": 10, "validation": 5},
+          "feedback": "Excellent. Vous utilisez l'antécédent sans imposer un diagnostic. En renvoyant à son propre souvenir, vous l'amenez à faire lui-même le lien entre la phase haute et la dépression qui a suivi. C'est infiniment plus efficace qu'une explication clinique.",
+          "suite": "E05"
+        },
+        {
+          "id": "E04_B",
+          "texte": "Ce que vous décrivez — énergie élevée, peu de sommeil, projets multiples — c'est caractéristique d'une phase hypomaniaque dans un trouble bipolaire.",
+          "qualite": "maladroit",
+          "delta": {"alliance": -8, "directivite": 15, "validation": -8},
+          "feedback": "Vous posez le diagnostic trop frontalement. Alexandre va activer ses défenses ('c'est différent', 'les médecins étiquettent tout'). Le diagnostic bipolaire doit émerger progressivement, pas être annoncé comme une sentence.",
+          "suite": "E05"
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "titre": "La conscience émergente",
+      "contexte_clinique": "Alexandre parle un peu moins vite. Il regarde ses mains.",
+      "emotion_patient": "vulnerability",
+      "indicateur_emotion": "Légère prise de conscience — résistance diminuée",
+      "dialogue": "C'est vrai que la dépression après… c'était dur. Très dur. Je voudrais pas revivre ça. Mais là c'est pas pareil.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E05_A",
+          "texte": "Vous ne voulez pas revivre ça — c'est une information importante. Est-ce que vous seriez prêt à qu'on regarde ensemble comment éviter que ça se reproduise ?",
+          "qualite": "excellent",
+          "delta": {"alliance": 15, "exploration": 10, "securisation": 10, "validation": 10},
+          "feedback": "Parfait. Vous vous appuyez sur sa motivation principale (éviter la dépression) pour proposer une alliance de prévention. C'est la porte d'entrée thérapeutique avec les patients en phase hypomaniaque : non pas 'vous êtes malade' mais 'on peut protéger votre avenir'.",
+          "suite": "FIN"
+        },
+        {
+          "id": "E05_B",
+          "texte": "Justement — c'est pour ça qu'on doit agir maintenant, avant que ça empire.",
+          "qualite": "neutre",
+          "delta": {"alliance": -3, "directivite": 10, "securisation": -5},
+          "feedback": "'Avant que ça empire' réintroduit une menace qui peut provoquer la résistance. La formulation est trop alarmiste à ce stade délicat où Alexandre commence à s'ouvrir.",
+          "suite": "FIN"
+        }
+      ]
+    }
+  ],
+  "fins": {
+    "succes": {
+      "titre": "Alliance thérapeutique établie",
+      "message": "Vous avez maintenu le cadre sans confronter directement l'euphorie, et utilisé l'antécédent dépressif comme levier motivationnel. Alexandre accepte d'envisager un suivi.",
+      "seuil_score": 60
+    },
+    "partiel": {
+      "titre": "Coopération partielle",
+      "message": "Alexandre est resté mais plusieurs confrontations ont activé sa résistance. Le suivi sera possible mais nécessite un travail de réparation.",
+      "seuil_score": 35
+    },
+    "echec": {
+      "titre": "Résistance non surmontée",
+      "message": "Des confrontations directes ont renforcé les défenses d'Alexandre. Il partira convaincu qu'il n'a pas besoin d'aide.",
+      "seuil_score": 0
+    }
+  },
+  "objectifs_pedagogiques": [
+    "Maintenir le cadre sans confronter directement l'euphorie",
+    "Explorer les conséquences fonctionnelles indirectement",
+    "Utiliser l'antécédent dépressif comme levier motivationnel",
+    "Éviter de poser le diagnostic de manière frontale",
+    "Proposer une alliance de prévention plutôt que de traitement"
+  ],
+  "pieges_relationnels": [
+    "Confronter directement l'énergie élevée ou le manque de sommeil",
+    "Poser le diagnostic bipolaire trop tôt",
+    "S'aligner sur l'inquiétude de la femme contre le patient",
+    "Valider l'euphorie en semblant partager l'enthousiasme",
+    "Utiliser un vocabulaire alarmiste ('ça empire', 'c'est grave')"
+  ]
+}

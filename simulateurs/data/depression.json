@@ -1,0 +1,315 @@
+{
+  "id": "depression_jean_v1",
+  "meta": {
+    "titre": "Épisode dépressif caractérisé",
+    "categorie": "Troubles de l'humeur",
+    "difficulte": "intermediaire",
+    "duree_estimee": 20,
+    "version": "1.0.0",
+    "reference_cim11": "6A70",
+    "auteur": "Psydiag",
+    "date_creation": "2025-01"
+  },
+  "patient": {
+    "prenom": "Jean",
+    "age": 48,
+    "genre": "M",
+    "avatar_initiales": "J",
+    "avatar_couleur": "#4A5A6B",
+    "contexte_socioprofessionnel": "Cadre commercial, 2 enfants adultes, séparation conjugale il y a 8 mois. Arrêt maladie depuis 6 semaines.",
+    "motif_consultation": "Adressé par médecin traitant. Jean se présente 'parce qu'on me l'a demandé'.",
+    "antecedents": "Pas d'antécédents psychiatriques. Père décédé d'un infarctus à 52 ans. Consommation d'alcool modérée mais augmentée depuis la séparation.",
+    "presentation_physique": {
+      "tenue": "Vêtements corrects mais froissés, rasage négligé — effort fait mais insuffisant",
+      "posture": "Affaissée, épaules tombantes, corps lourd",
+      "contact_visuel": "Regard peu mobile, fixant le sol ou un point devant lui",
+      "debit_parole": "Lent, voix faible, phrases courtes, temps de latence prolongés",
+      "tonalite_emotionnelle": "Apathie de surface, affect douloureux en dessous",
+      "cooperation": "Passive — répond aux questions sans investissement spontané",
+      "mecanismes_defensifs": "Minimisation, dévalorisation, intellectualisation froide",
+      "particularites_relationnelles": "Peu de demande relationnelle — peut être vécu comme indifférent, mais souffrance profonde",
+      "evolution_entretien": "Si exploration empathique : légère mobilisation possible. Si pression : fermeture ou irritabilité sourde."
+    }
+  },
+  "scoring": {
+    "dimensions": ["alliance", "ecoute", "validation", "exploration", "rythme", "directivite", "silence", "securisation"],
+    "depart": {
+      "alliance": 25,
+      "ecoute": 50,
+      "validation": 50,
+      "exploration": 50,
+      "rythme": 50,
+      "directivite": 30,
+      "silence": 50,
+      "securisation": 30
+    },
+    "seuil_rupture_alliance": 5,
+    "seuil_succes": 60
+  },
+  "etapes": [
+    {
+      "id": "E01",
+      "titre": "Entrée dans le bureau",
+      "contexte_clinique": "Jean entre lentement, s'assoit lourdement. Il regarde devant lui sans vous regarder vraiment.",
+      "emotion_patient": "apathy",
+      "indicateur_emotion": "Apathie — ralentissement psychomoteur visible",
+      "dialogue": "Bonjour. Mon médecin m'a dit de venir.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E01_A",
+          "texte": "Bonjour Jean. Je vous remercie d'être venu. Comment s'est passé votre trajet jusqu'ici ?",
+          "qualite": "excellent",
+          "delta": {"alliance": 5, "securisation": 5, "rythme": 5, "ecoute": 5},
+          "feedback": "Bien. Commencer par une question concrète, non menaçante ('le trajet') permet de créer un premier contact sans pression. Pour un patient dépressif avec peu d'énergie, l'atterrissage progressif est essentiel.",
+          "suite": "E02"
+        },
+        {
+          "id": "E01_B",
+          "texte": "Très bien. Et vous, qu'est-ce qui vous amène vraiment ?",
+          "qualite": "maladroit",
+          "delta": {"alliance": -5, "rythme": -8, "directivite": 8},
+          "feedback": "Le 'vraiment' sous-entend que la réponse de Jean ('mon médecin m'a dit') n'est pas suffisante — vous le mettez en question dès la première phrase. Pour un patient avec peu d'énergie relationnelle, c'est une micro-agression.",
+          "suite": "E02"
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "titre": "Absence de demande",
+      "contexte_clinique": "Jean hausse légèrement les épaules.",
+      "emotion_patient": "apathy",
+      "indicateur_emotion": "Apathie — absence de demande spontanée",
+      "dialogue": "Je suis là parce qu'il le fallait. Je sais même pas ce que je viens chercher ici.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E02_A",
+          "texte": "C'est déjà quelque chose d'être là, même sans savoir pourquoi. Et parfois on arrive sans savoir ce qu'on cherche.",
+          "qualite": "excellent",
+          "delta": {"alliance": 10, "validation": 10, "securisation": 8, "rythme": 5},
+          "feedback": "Excellent. Vous validez la position ambivalente de Jean sans en faire un problème. 'C'est déjà quelque chose d'être là' reconnaît l'effort que ça représente pour lui — effort invisible pour un observateur extérieur, mais réel pour quelqu'un en état dépressif.",
+          "suite": "E03"
+        },
+        {
+          "id": "E02_B",
+          "texte": "Vous avez du mal à voir l'utilité de cette démarche ?",
+          "qualite": "bien",
+          "delta": {"alliance": 5, "ecoute": 8, "exploration": 8, "validation": 3},
+          "feedback": "Bien. Vous nommez l'ambivalence sans la critiquer, et ouvrez l'espace à l'exploration. Légèrement plus analytique que chaleureux — fonctionnel mais pas le plus accueillant.",
+          "suite": "E03"
+        },
+        {
+          "id": "E02_C",
+          "texte": "Votre médecin pense que vous en avez besoin — ça doit avoir une raison.",
+          "qualite": "maladroit",
+          "delta": {"alliance": -5, "directivite": 10, "validation": -8, "securisation": -5},
+          "feedback": "Vous renvoyez Jean vers l'autorité du médecin — ce qui peut renforcer son sentiment d'être là 'sous contrainte'. Vous n'êtes pas allié de Jean, vous êtes allié du médecin dans cette formulation.",
+          "suite": "E03"
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "titre": "La fatigue",
+      "contexte_clinique": "Jean regarde ses mains posées sur ses genoux.",
+      "emotion_patient": "apathy_low",
+      "indicateur_emotion": "Apathie profonde — anhédonie",
+      "dialogue": "Je suis fatigué. Vraiment fatigué. Pas le genre de fatigue qui part avec une bonne nuit. C'est… autre chose.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E03_A",
+          "texte": "Une fatigue qui ne part pas même quand on se repose… c'est une fatigue différente. Comment ça se manifeste pour vous au quotidien ?",
+          "qualite": "excellent",
+          "delta": {"alliance": 10, "validation": 10, "ecoute": 10, "exploration": 8},
+          "feedback": "Vous validez d'abord la distinction que Jean fait lui-même (fatigue différente) puis vous ouvrez l'exploration du quotidien. Cette séquence — valider, puis explorer — est cliniquement structurée et empathiquement juste.",
+          "suite": "E04"
+        },
+        {
+          "id": "E03_B",
+          "texte": "Vous dormez combien d'heures en ce moment ?",
+          "qualite": "neutre",
+          "delta": {"alliance": 0, "exploration": 8, "validation": -8, "ecoute": -5},
+          "feedback": "Question cliniquement utile, mais vous passez directement au recueil de données sans accueillir ce que Jean vient de dire. La distinction qu'il a faite ('pas le genre de fatigue qui part') méritait d'être reconnue avant d'explorer.",
+          "suite": "E04"
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "titre": "Le vide",
+      "contexte_clinique": "Jean fixe un point devant lui.",
+      "emotion_patient": "anhedonia",
+      "indicateur_emotion": "Anhédonie — sentiment de vide",
+      "dialogue": "Je fais les choses. Je me lève, je mange, je regarde la télé. Mais c'est… vide. Avant j'aimais cuisiner, j'aimais le vélo. Là rien. Rien n'a de goût.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E04_A",
+          "texte": "Ce que vous décrivez — faire les gestes sans les ressentir, perdre le goût de ce qu'on aimait — c'est l'un des aspects les plus douloureux de ce que vous traversez.",
+          "qualite": "excellent",
+          "delta": {"alliance": 12, "validation": 12, "ecoute": 10, "securisation": 5},
+          "feedback": "Vous nommez l'anhédonie avec ses mots ('les gestes sans les ressentir', 'perdre le goût') et vous la qualifiez comme 'l'un des aspects les plus douloureux' — ce qui valide que Jean souffre même si extérieurement il 'fait les choses'.",
+          "suite": "E05"
+        },
+        {
+          "id": "E04_B",
+          "texte": "Ça dure depuis quand, cette perte d'intérêt ?",
+          "qualite": "neutre",
+          "delta": {"alliance": 0, "exploration": 8, "validation": -5, "ecoute": -3},
+          "feedback": "Utile cliniquement mais trop rapide. Jean a fait un effort pour mettre des mots sur son vécu — la question de la durée est nécessaire mais peut attendre l'accueil émotionnel.",
+          "suite": "E05"
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "titre": "Idéation suicidaire — approche",
+      "contexte_clinique": "Jean se tait un long moment. Sa voix est encore plus basse quand il reprend.",
+      "emotion_patient": "hopelessness",
+      "indicateur_emotion": "Désespoir — idéation suicidaire possible",
+      "dialogue": "Des fois je me dis que ce serait plus simple si… si j'étais plus là. Pas que j'aie envie de mourir exactement. Mais être là, ça me demande tellement d'efforts.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E05_A",
+          "texte": "Je vous entends, Jean. Ce que vous décrivez — l'idée que ce serait plus simple de ne plus être là — c'est important et je suis content que vous me le disiez. Est-ce que vous avez des pensées plus précises sur le fait de mettre fin à vos jours ?",
+          "qualite": "excellent",
+          "delta": {"alliance": 10, "securisation": 12, "exploration": 15, "validation": 8, "ecoute": 8},
+          "feedback": "Réponse cliniquement exemplaire. Vous accueillez sans panique, vous validez ('c'est important'), vous remerciez la confidence, puis vous explorez précisément le niveau idéatoire. Cette séquence — accueil + exploration directe — est conforme aux recommandations HAS pour l'évaluation du risque suicidaire.",
+          "suite": "E06"
+        },
+        {
+          "id": "E05_B",
+          "texte": "Ne dites pas ça. Vous avez vos enfants, vous avez des raisons de vivre.",
+          "qualite": "rupture",
+          "delta": {"alliance": -18, "validation": -20, "securisation": -15, "directivite": 20, "ecoute": -15},
+          "feedback": "⚠️ RUPTURE. Vous invalidez immédiatement l'expérience de Jean en lui opposant des 'raisons de vivre'. Ce type de réponse est l'un des plus fréquents — et des plus nocifs. Jean va avoir honte d'avoir dit ça, et ne le redira probablement pas. La culpabilisation ('vous avez vos enfants') est contre-thérapeutique.",
+          "suite": "E06",
+          "alerte": "rupture_critique"
+        },
+        {
+          "id": "E05_C",
+          "texte": "Ces pensées sont là souvent ?",
+          "qualite": "bien",
+          "delta": {"alliance": 5, "exploration": 10, "ecoute": 5},
+          "feedback": "Question directe et cliniquement utile. Légèrement moins chaleureuse que la première option — l'absence de validation préalable laisse Jean sans accueil émotionnel — mais acceptable pour explorer le risque.",
+          "suite": "E06"
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "titre": "Évaluation du risque suicidaire",
+      "contexte_clinique": "Jean regarde le sol.",
+      "emotion_patient": "shame_light",
+      "indicateur_emotion": "Légère honte d'avoir dit ça",
+      "dialogue": "Non, pas de plan ou quoi. C'est juste… je suis épuisé de tout. Je vois pas quand ça va s'arrêter.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E06_A",
+          "texte": "Il n'y a pas de plan — c'est une information importante. Et ce que vous décrivez — l'épuisement, l'absence de perspective — c'est un signe que vous souffrez vraiment, et que vous avez besoin de soutien. On va en parler ensemble.",
+          "qualite": "excellent",
+          "delta": {"alliance": 12, "securisation": 12, "validation": 10, "exploration": 5},
+          "feedback": "Excellent. Vous sécurisez l'information (pas de plan) sans la banaliser, vous nommez la souffrance réelle, et vous proposez une alliance de travail ('ensemble'). C'est la posture clinique recommandée : évaluer, nommer, contenir, proposer.",
+          "suite": "E07"
+        },
+        {
+          "id": "E06_B",
+          "texte": "Bon, pas de plan, donc c'est pas urgent. On va noter ça et passer à autre chose.",
+          "qualite": "rupture",
+          "delta": {"alliance": -20, "validation": -20, "securisation": -20, "directivite": 15},
+          "feedback": "⚠️ RUPTURE GRAVE. 'Pas urgent' après une révélation d'idéation suicidaire est cliniquement incorrect et humainement dévastateur. Jean vient de faire confiance — vous répondez par une évaluation administrative. L'idéation sans plan reste une souffrance qui mérite d'être prise au sérieux.",
+          "suite": "E07",
+          "alerte": "rupture_critique"
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "titre": "La séparation",
+      "contexte_clinique": "Jean lève les yeux un moment.",
+      "emotion_patient": "grief_mild",
+      "indicateur_emotion": "Deuil — perte relationnelle",
+      "dialogue": "Ma femme est partie il y a huit mois. Enfin c'est moi qui suis parti mais… c'est elle qui avait tout décidé depuis longtemps. Je crois que c'est là que tout a commencé.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E07_A",
+          "texte": "Une séparation où on part mais où on a l'impression que ça avait été décidé sans vous — ça laisse une forme de perte de contrôle particulière.",
+          "qualite": "excellent",
+          "delta": {"alliance": 10, "ecoute": 10, "validation": 10, "exploration": 5},
+          "feedback": "Vous saisissez la nuance de Jean ('c'est moi qui suis parti mais elle avait décidé') et vous la nommez : perte de contrôle, sentiment d'agentivité vidée. C'est cliniquement précis et montre une écoute fine.",
+          "suite": "E08"
+        },
+        {
+          "id": "E07_B",
+          "texte": "Ça s'est passé comment, la séparation ?",
+          "qualite": "neutre",
+          "delta": {"alliance": 0, "exploration": 8, "validation": -5, "ecoute": -3},
+          "feedback": "Question ouverte utile, mais vous passez aux faits avant d'avoir accueilli l'expérience de perte de contrôle que Jean venait d'exprimer.",
+          "suite": "E08"
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "titre": "Fin de séance — alliance",
+      "contexte_clinique": "Jean vous regarde avec une légère mobilisation.",
+      "emotion_patient": "mild_connection",
+      "indicateur_emotion": "Légère connexion — premier lien possible",
+      "dialogue": "Je sais pas si ça va me servir à grand chose, tout ça. Mais… c'est la première fois depuis longtemps que j'ai l'impression que quelqu'un écoute vraiment.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E08_A",
+          "texte": "Ce que vous venez de dire compte beaucoup. Et ça me donne envie qu'on continue à travailler ensemble, si vous êtes d'accord.",
+          "qualite": "excellent",
+          "delta": {"alliance": 15, "validation": 10, "securisation": 8, "ecoute": 5},
+          "feedback": "Vous accueillez le compliment implicite sans le survaloriser, et vous l'utilisez pour proposer la continuité. La formulation 'si vous êtes d'accord' restitue le pouvoir de décision à Jean — ce qui est essentiel pour un patient qui se sent peu agentif.",
+          "suite": "FIN"
+        },
+        {
+          "id": "E08_B",
+          "texte": "Je suis là pour ça. On va mettre en place un suivi régulier.",
+          "qualite": "neutre",
+          "delta": {"alliance": 3, "directivite": 10, "validation": -3},
+          "feedback": "Vous assumez la décision de la continuité sans laisser Jean choisir. La réponse est fonctionnelle mais passe à côté de ce que Jean vient de dire — qui méritait d'être accueilli avant de planifier.",
+          "suite": "FIN"
+        }
+      ]
+    }
+  ],
+  "fins": {
+    "succes": {
+      "titre": "Premier lien établi",
+      "message": "Jean est venu sans demande — il repart avec une première expérience d'être entendu. L'alliance est fragile mais réelle. Le travail sur l'idéation suicidaire a été conduit avec professionnalisme.",
+      "seuil_score": 60
+    },
+    "partiel": {
+      "titre": "Alliance minimale",
+      "message": "Jean repart avec un sentiment mitigé. Quelques maladresses ont limité la profondeur du contact. Le suivi sera possible mais demandera un travail de réparation.",
+      "seuil_score": 35
+    },
+    "echec": {
+      "titre": "Occasion manquée",
+      "message": "Jean est reparti probablement convaincu que 'ça ne servait à rien'. Des ruptures importantes ont eu lieu, notamment autour de l'idéation suicidaire. Occasion clinique manquée.",
+      "seuil_score": 0
+    }
+  },
+  "objectifs_pedagogiques": [
+    "Évaluer le risque suicidaire sans panique ni banalisation",
+    "Construire une alliance avec un patient sans demande",
+    "Accueillir l'anhédonie comme symptôme visible de souffrance profonde",
+    "Éviter la réassurance prématurée face à l'idéation suicidaire",
+    "Maintenir le lien avec un patient présentant peu d'investissement relationnel"
+  ],
+  "pieges_relationnels": [
+    "Invalider l'idéation suicidaire avec des 'raisons de vivre'",
+    "Banaliser l'absence de plan ('pas urgent')",
+    "Passer aux faits avant l'accueil émotionnel",
+    "Prendre le contrôle du cadre sans laisser de choix au patient"
+  ]
+}
