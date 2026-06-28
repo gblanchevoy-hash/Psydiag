@@ -1,0 +1,241 @@
+{
+  "id": "tag_nathalie_v1",
+  "meta": {
+    "titre": "Trouble Anxieux Généralisé",
+    "categorie": "Troubles anxieux",
+    "difficulte": "debutant",
+    "duree_estimee": 18,
+    "version": "1.0.0",
+    "reference_cim11": "6B00",
+    "auteur": "Psydiag",
+    "date_creation": "2025-01"
+  },
+  "patient": {
+    "prenom": "Nathalie",
+    "age": 42,
+    "genre": "F",
+    "avatar_initiales": "N",
+    "avatar_couleur": "#5A7A8A",
+    "contexte_socioprofessionnel": "Enseignante, mariée, un enfant de 14 ans. Décrit elle-même être 'anxieuse de nature' depuis toujours. Consulte pour la première fois.",
+    "motif_consultation": "Consulte spontanément. Se plaint de 'trop s'inquiéter pour tout' et de fatigue chronique depuis 2 ans.",
+    "antecedents": "Pas d'antécédents psychiatriques. Mère anxieuse. Traitement par magnésium et valériane en automédication. Quelques consultations chez le médecin traitant pour 'somatisations'.",
+    "presentation_physique": {
+      "tenue": "Soignée, neutre, classique — rien ne dépasse",
+      "posture": "Légèrement crispée, mains jointes ou tripotant un mouchoir",
+      "contact_visuel": "Bon mais parfois interrompu quand l'anxiété monte",
+      "debit_parole": "Rapide, tendance à anticiper et à finir ses phrases par des questions",
+      "tonalite_emotionnelle": "Anxiété diffuse, besoin de réassurance, culpabilité d'être là",
+      "cooperation": "Très bonne — demandeuse d'aide",
+      "mecanismes_defensifs": "Intellectualisation, rationalisation excessive, recherche de réassurance",
+      "particularites_relationnelles": "Très sensible à l'approbation du clinicien — risque de dépendance à la réassurance",
+      "evolution_entretien": "Si bien guidée : accède à l'exploration de ses schémas d'inquiétude. Si trop rassurée : renforce le cycle anxieux."
+    }
+  },
+  "scoring": {
+    "dimensions": ["alliance", "ecoute", "validation", "exploration", "rythme", "directivite", "silence", "securisation"],
+    "depart": {
+      "alliance": 45,
+      "ecoute": 50,
+      "validation": 50,
+      "exploration": 50,
+      "rythme": 50,
+      "directivite": 30,
+      "silence": 50,
+      "securisation": 45
+    },
+    "seuil_rupture_alliance": 5,
+    "seuil_succes": 65
+  },
+  "etapes": [
+    {
+      "id": "E01",
+      "titre": "La plainte",
+      "contexte_clinique": "Nathalie s'assoit rapidement, sort son mouchoir, le pose sur ses genoux. Elle vous sourit mais son regard est tendu.",
+      "emotion_patient": "anxiety_moderate",
+      "indicateur_emotion": "Anxiété modérée — demandeuse d'aide",
+      "dialogue": "Voilà, je sais pas vraiment si j'ai une vraie raison de venir. C'est peut-être rien. Mais je m'inquiète tout le temps pour tout — le travail, mon fils, la santé, l'argent… Et je suis épuisée.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E01_A",
+          "texte": "Vous venez, et c'est déjà une démarche. Ce que vous décrivez — s'inquiéter pour tout en permanence, et être épuisée — c'est quelque chose de réel et qui mérite qu'on s'y arrête.",
+          "qualite": "excellent",
+          "delta": {"alliance": 10, "validation": 12, "securisation": 10, "ecoute": 8},
+          "feedback": "Excellent. Vous validez la légitimité de la consultation ('c'est peut-être rien' est une minimisation à déconstruire), vous nommez les deux composantes (inquiétude diffuse + épuisement) et vous proposez une attention sérieuse. Le cadre est posé.",
+          "suite": "E02"
+        },
+        {
+          "id": "E01_B",
+          "texte": "Tout le monde s'inquiète un peu — c'est normal. Qu'est-ce qui vous inquiète le plus en ce moment ?",
+          "qualite": "maladroit",
+          "delta": {"alliance": -8, "validation": -12, "ecoute": -5},
+          "feedback": "⚠️ 'Tout le monde s'inquiète un peu' invalide d'emblée sa souffrance. Nathalie a dit 'c'est peut-être rien' — vous confirmez cette minimisation. Elle repartira convaincue qu'elle n'avait pas vraiment de raison de venir.",
+          "suite": "E02"
+        },
+        {
+          "id": "E01_C",
+          "texte": "Vous vous inquiétez pour tout depuis combien de temps ?",
+          "qualite": "neutre",
+          "delta": {"alliance": 2, "exploration": 8, "validation": -5},
+          "feedback": "Question utile cliniquement mais vous passez aux données avant d'accueillir la plainte. Nathalie a pris de l'élan pour venir — la question chronologique est prématurée.",
+          "suite": "E02"
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "titre": "Le contenu des inquiétudes",
+      "contexte_clinique": "Nathalie se détend légèrement.",
+      "emotion_patient": "anxiety_moderate",
+      "indicateur_emotion": "Anxiété modérée — début d'expression",
+      "dialogue": "Le matin je me réveille et c'est parti — je pense à ce que j'ai à faire au travail, si mon fils va bien à l'école, si on va pouvoir payer les vacances, si j'ai pas oublié quelque chose… C'est sans arrêt. Même quand tout va bien, je trouve quelque chose à craindre.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E02_A",
+          "texte": "Ce que vous décrivez — trouver quelque chose à craindre même quand tout va bien — c'est une des choses les plus épuisantes qui soit. Votre tête ne s'arrête jamais vraiment ?",
+          "qualite": "excellent",
+          "delta": {"alliance": 10, "validation": 12, "ecoute": 10, "exploration": 5},
+          "feedback": "Vous reprenez sa propre formulation ('trouver quelque chose à craindre') et vous explorez l'aspect continu de l'inquiétude. La question finale ('votre tête ne s'arrête jamais ?') invite à approfondir sans forcer.",
+          "suite": "E03"
+        },
+        {
+          "id": "E02_B",
+          "texte": "Vous avez essayé des techniques de relaxation ? La méditation peut vraiment aider dans ces cas.",
+          "qualite": "maladroit",
+          "delta": {"alliance": -8, "validation": -10, "directivite": 12},
+          "feedback": "Trop tôt. Vous passez aux solutions avant d'avoir exploré et validé. Nathalie va se sentir expédiée — 'le spécialiste m'a dit de méditer'. La proposition de solution prématurée signale que vous n'avez pas vraiment entendu sa souffrance.",
+          "suite": "E03"
+        },
+        {
+          "id": "E02_C",
+          "texte": "Ces inquiétudes vous semblent réalistes, ou vous savez qu'elles sont excessives ?",
+          "qualite": "bien",
+          "delta": {"alliance": 5, "exploration": 10, "ecoute": 5},
+          "feedback": "Bien. Vous explorez le rapport de Nathalie à ses propres inquiétudes — ce qui est cliniquement utile pour évaluer l'insight. Légèrement analytique avant l'accueil émotionnel complet.",
+          "suite": "E03"
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "titre": "La demande de réassurance",
+      "contexte_clinique": "Nathalie vous regarde avec une légère intensité.",
+      "emotion_patient": "anxiety_moderate",
+      "indicateur_emotion": "Besoin de réassurance — pattern anxieux visible",
+      "dialogue": "Est-ce que vous pensez que c'est grave ? Je veux dire… c'est pas dans ma tête quand même ? Il y a vraiment quelque chose qui ne va pas ?",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E03_A",
+          "texte": "Ce que vous vivez est réel et a un impact sur votre quotidien — ça mérite une attention sérieuse. En même temps, je remarque que vous cherchez à savoir si c'est 'grave' — est-ce que c'est une question que vous vous posez souvent ?",
+          "qualite": "excellent",
+          "delta": {"alliance": 10, "validation": 8, "exploration": 12, "ecoute": 8},
+          "feedback": "Excellente réponse. Vous validez ('c'est réel') sans réassurer excessivement, puis vous retournez la question vers le pattern de recherche de réassurance lui-même — ce qui est au cœur du TAGi. C'est cliniquement précis et pédagogiquement riche.",
+          "suite": "E04"
+        },
+        {
+          "id": "E03_B",
+          "texte": "Non non, c'est pas grave — beaucoup de gens vivent avec de l'anxiété et s'en sortent très bien.",
+          "qualite": "maladroit",
+          "delta": {"alliance": -5, "validation": -8, "exploration": -5},
+          "feedback": "Piège classique de la réassurance. Vous calmez l'anxiété à court terme, mais vous renforcez le cycle : Nathalie reviendra chercher de la réassurance à chaque consultation. De plus, 'c'est pas grave' peut invalider sa souffrance.",
+          "suite": "E04"
+        },
+        {
+          "id": "E03_C",
+          "texte": "Ce que vous décrivez ressemble à ce qu'on appelle un trouble anxieux généralisé. C'est bien documenté et traitable.",
+          "qualite": "neutre",
+          "delta": {"alliance": 2, "exploration": 5, "directivite": 8},
+          "feedback": "L'information diagnostique est juste, mais prématurée. Nathalie cherche d'abord à être entendue et validée — pas étiquetée. Le diagnostic peut venir, mais après l'exploration.",
+          "suite": "E04"
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "titre": "L'impact sur la vie",
+      "contexte_clinique": "Nathalie réfléchit un moment.",
+      "emotion_patient": "mixed_sad_shame",
+      "indicateur_emotion": "Tristesse légère — prise de conscience de l'impact",
+      "dialogue": "Oui… je demande souvent à mon mari si ça va, si j'ai bien fait les choses… Il commence à s'agacer. Et au travail, je relis mes mails dix fois avant de les envoyer. Je perds un temps fou.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E04_A",
+          "texte": "Relire dix fois, vérifier auprès de votre mari — c'est une façon de gérer l'inquiétude qui prend beaucoup d'énergie. Et je remarque que ça crée des frictions autour de vous en plus de l'épuisement.",
+          "qualite": "excellent",
+          "delta": {"alliance": 10, "validation": 10, "exploration": 10, "ecoute": 8},
+          "feedback": "Vous nommez les comportements d'évitement et de réassurance (relecture, vérification auprès du mari) comme des stratégies de gestion, pas des défauts. Et vous pointez le coût relationnel sans juger. C'est cliniquement précis.",
+          "suite": "E05"
+        },
+        {
+          "id": "E04_B",
+          "texte": "Votre mari s'agace — comment ça se passe entre vous en ce moment ?",
+          "qualite": "neutre",
+          "delta": {"alliance": 3, "exploration": 8, "ecoute": 5},
+          "feedback": "Vous pivotez vers la relation conjugale, ce qui peut être pertinent mais décentre de l'anxiété elle-même. Acceptable si c'est pour explorer l'impact relationnel, moins pertinent si ça devient une consultation couple.",
+          "suite": "E05"
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "titre": "Vers le travail thérapeutique",
+      "contexte_clinique": "Nathalie souffle légèrement.",
+      "emotion_patient": "openness_emerging",
+      "indicateur_emotion": "Légère ouverture — prête à s'engager",
+      "dialogue": "Je savais pas que c'était autant lié. Je pensais que j'étais juste… comme ça. Que c'était mon caractère.",
+      "dialogue_type": "parole",
+      "reponses": [
+        {
+          "id": "E05_A",
+          "texte": "C'est une distinction importante : c'est pas votre caractère, c'est quelque chose qui s'est installé et qui se maintient — et surtout, quelque chose sur lequel on peut travailler.",
+          "qualite": "excellent",
+          "delta": {"alliance": 12, "validation": 12, "securisation": 10, "exploration": 8},
+          "feedback": "Parfait. Vous distinguez identité ('c'est mon caractère') et symptôme ('quelque chose qui s'est installé') — ce qui est fondamental pour la motivation au changement. Et vous ouvrez la perspective thérapeutique sans promettre de miracle.",
+          "suite": "FIN"
+        },
+        {
+          "id": "E05_B",
+          "texte": "Exactement — et avec une TCC, on peut vraiment travailler ça efficacement.",
+          "qualite": "neutre",
+          "delta": {"alliance": 3, "directivite": 8, "exploration": -3},
+          "feedback": "La proposition TCC est pertinente cliniquement, mais elle arrive trop vite et trop directivement. Nathalie vient de faire une prise de conscience — lui proposer immédiatement une modalité de traitement ne laisse pas d'espace à ce moment.",
+          "suite": "FIN"
+        }
+      ]
+    }
+  ],
+  "fins": {
+    "succes": {
+      "titre": "Alliance solide établie",
+      "message": "Vous avez validé sans réassurer excessivement, exploré les patterns d'inquiétude et ouvert la perspective thérapeutique. Nathalie repart avec une compréhension nouvelle de son anxiété.",
+      "seuil_score": 65
+    },
+    "partiel": {
+      "titre": "Alliance correcte",
+      "message": "Nathalie se sent entendue mais quelques réassurances excessives ou solutions prématurées ont limité la profondeur de l'exploration.",
+      "seuil_score": 40
+    },
+    "echec": {
+      "titre": "Consultation peu utile",
+      "message": "Des réassurances prématurées ou des propositions de solutions trop rapides n'ont pas permis à Nathalie d'accéder à une compréhension de son anxiété. Elle repart soulagée à court terme mais sans outil.",
+      "seuil_score": 0
+    }
+  },
+  "objectifs_pedagogiques": [
+    "Valider la souffrance anxieuse sans la minimiser",
+    "Éviter la réassurance excessive qui renforce le cycle anxieux",
+    "Identifier les comportements d'évitement et de vérification",
+    "Distinguer caractère et symptôme pour la motivation au changement",
+    "Ne pas proposer de solutions avant d'avoir exploré"
+  ],
+  "pieges_relationnels": [
+    "Réassurer excessivement ('c'est pas grave')",
+    "Proposer des techniques trop tôt (relaxation, méditation)",
+    "Valider l'inquiétude en entrant dans son contenu",
+    "Poser le diagnostic avant d'avoir exploré",
+    "Manquer le pattern de recherche de réassurance"
+  ]
+}

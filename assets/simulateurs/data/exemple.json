@@ -1,0 +1,124 @@
+{
+  "_comment": "MODÈLE DE SCÉNARIO PSYMULATION — Copier et remplir pour créer un nouveau scénario",
+
+  "id": "exemple_prenom_v1",
+  "meta": {
+    "titre": "Titre du trouble / de la présentation",
+    "categorie": "Ex: Psychoses | Troubles anxieux | Personnalité | Trauma | Humeur",
+    "difficulte": "debutant | intermediaire | avance",
+    "duree_estimee": 20,
+    "version": "1.0.0",
+    "reference_cim11": "Code CIM-11 (ex: 6A70)",
+    "auteur": "Psydiag",
+    "date_creation": "YYYY-MM"
+  },
+
+  "patient": {
+    "prenom": "Prénom",
+    "age": 0,
+    "genre": "M | F | X",
+    "avatar_initiales": "P",
+    "avatar_couleur": "#4A7C6F",
+    "contexte_socioprofessionnel": "Description détaillée du contexte de vie",
+    "motif_consultation": "Motif tel qu'il est présenté en consultation",
+    "antecedents": "Antécédents psychiatriques, médicaux et psychosociaux pertinents",
+    "presentation_physique": {
+      "tenue": "Description de la tenue et présentation physique générale",
+      "posture": "Attitude corporelle observable",
+      "contact_visuel": "Qualité et caractéristiques du contact oculaire",
+      "debit_parole": "Rythme, volume, particularités du débit",
+      "tonalite_emotionnelle": "Affect observé, tonalité de fond",
+      "cooperation": "Degré et qualité de la coopération",
+      "mecanismes_defensifs": "Mécanismes observables (ex: évitement, projection, clivage...)",
+      "particularites_relationnelles": "Éléments spécifiques à la dynamique relationnelle",
+      "evolution_entretien": "Comment la présentation peut évoluer selon l'attitude du clinicien"
+    }
+  },
+
+  "scoring": {
+    "dimensions": ["alliance", "ecoute", "validation", "exploration", "rythme", "directivite", "silence", "securisation"],
+    "depart": {
+      "alliance": 20,
+      "ecoute": 50,
+      "validation": 50,
+      "exploration": 50,
+      "rythme": 50,
+      "directivite": 30,
+      "silence": 50,
+      "securisation": 20
+    },
+    "seuil_rupture_alliance": 5,
+    "seuil_succes": 65
+  },
+
+  "etapes": [
+    {
+      "id": "E01",
+      "titre": "Titre court de l'étape",
+      "contexte_clinique": "Ce que le clinicien observe — comportement, posture, regard. Ce que le patient fait sans parler. Description à la 3e personne, clinique et précise.",
+      "emotion_patient": "anxiety_high | anxiety_moderate | shame | shame_high | dissociation_light | dissociation_moderate | apathy | anhedonia | hopelessness | vulnerability | openness_emerging | mild_connection | mixed_hope_fatigue | mixed_sad_shame | grief_mild | anticipation_mild",
+      "indicateur_emotion": "Libellé court affiché dans l'interface — ex: Anxiété élevée — vigilance défensive",
+      "dialogue": "Ce que le patient dit exactement. Utiliser un langage naturel, hésitations, reformulations. Ou '...' si silence.",
+      "dialogue_type": "parole | silence",
+      "reponses": [
+        {
+          "id": "E01_A",
+          "texte": "Ce que le clinicien dit exactement",
+          "texte_display": "Version courte si le texte est long (optionnel)",
+          "qualite": "excellent | bien | neutre | maladroit | rupture",
+          "delta": {
+            "alliance": 0,
+            "ecoute": 0,
+            "validation": 0,
+            "exploration": 0,
+            "rythme": 0,
+            "directivite": 0,
+            "silence": 0,
+            "securisation": 0
+          },
+          "feedback": "Explication pédagogique de pourquoi cette réponse est bien ou mal adaptée. Environ 3-5 phrases. Citer les concepts cliniques pertinents (validation, alliance, contre-transfert, etc.)",
+          "suite": "E02",
+          "alerte": null
+        },
+        {
+          "id": "E01_B",
+          "texte": "Deuxième option de réponse",
+          "qualite": "maladroit",
+          "delta": {"alliance": -5, "securisation": -5, "directivite": 8},
+          "feedback": "Explication pédagogique...",
+          "suite": "E02",
+          "alerte": "rupture_risque | rupture_critique | null"
+        }
+      ]
+    }
+  ],
+
+  "fins": {
+    "succes": {
+      "titre": "Titre de la fin positive",
+      "message": "Description de ce qui s'est bien passé et de la signification clinique.",
+      "seuil_score": 65
+    },
+    "partiel": {
+      "titre": "Titre de la fin partielle",
+      "message": "Description de ce qui était mitigé.",
+      "seuil_score": 40
+    },
+    "echec": {
+      "titre": "Titre de la fin négative",
+      "message": "Description de ce qui s'est mal passé et de l'impact clinique.",
+      "seuil_score": 0
+    }
+  },
+
+  "objectifs_pedagogiques": [
+    "Objectif 1",
+    "Objectif 2",
+    "Objectif 3"
+  ],
+
+  "pieges_relationnels": [
+    "Piège 1 — description",
+    "Piège 2 — description"
+  ]
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Psydiag — Suite d'outils cliniques pour professionnels de santé mentale." />
+  <title>Psydiag — Portail d'accès professionnel</title>
+  <link rel="stylesheet" href="css/landing.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400&family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500&family=Cinzel+Decorative:wght@700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       CANVAS — Réseau neuronal animé
+  ════════════════════════════════════════════════ -->
+  <canvas id="neuroCanvas" aria-hidden="true"></canvas>
+
+  <!-- Halo suivant le curseur -->
+  <div id="cursorHalo" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       PAGE WRAPPER
+  ════════════════════════════════════════════════ -->
+  <div class="landing-page" id="landingPage">
+
+    <!-- ── HEADER ────────────────────────────────── -->
+    <header class="lp-header" role="banner">
+      <div class="lp-logo-wrap" aria-label="Psydiag">
+        <div class="lp-logo-glow" aria-hidden="true"></div>
+        <img src="assets/logo.webp" class="lp-logo-img" alt="Logo Psydiag" />
+        <span class="lp-logo-name">Psydiag</span>
+      </div>
+      <nav class="lp-header-nav" aria-label="Navigation principale">
+        <a href="#presentation" class="lp-nav-link">Présentation</a>
+        <a href="#acces" class="lp-nav-link">Accès</a>
+        <a href="#footer" class="lp-nav-link">Mentions légales</a>
+      </nav>
+    </header>
+
+    <!-- ── HERO ──────────────────────────────────── -->
+    <section class="lp-hero" aria-labelledby="heroTitle">
+      <div class="lp-hero-content">
+
+        <!-- Titre principal -->
+        <p class="lp-welcome">Bienvenue sur</p>
+        <h1 class="lp-title" id="heroTitle">
+          <span class="lp-title-accent" data-text="Psydiag">Psydiag</span>
+        </h1>
+
+        <!-- Sous-titre -->
+
+
+      </div>
+    </section>
+
+    <!-- ── PRÉSENTATION ───────────────────────────── -->
+    <section class="lp-presentation" id="presentation" aria-labelledby="presTitle">
+      <div class="lp-container">
+
+        <div class="lp-pres-text">
+          <p class="lp-pres-lead">
+            Psydiag est un SaaS médical et paramédical conçu pour accompagner les professionnels
+            dans leurs démarches cliniques grâce à des outils numériques spécialisés.
+          </p>
+          <p class="lp-pres-disclaimer">
+            Psydiag n'établit aucun diagnostic médical et constitue uniquement un outil d'aide
+            à la réflexion clinique destiné à des professionnels qualifiés.
+          </p>
+        </div>
+
+        <ul class="lp-features" role="list">
+          <li class="lp-feature-item">
+            <span class="lp-feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/><path d="M9 12h6M9 16h4"/></svg>
+            </span>
+            <div>
+              <strong>Aide à la recherche diagnostique</strong>
+              <span>Modules structurés pour accompagner le raisonnement clinique</span>
+            </div>
+          </li>
+          <li class="lp-feature-item">
+            <span class="lp-feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+            </span>
+            <div>
+              <strong>Évaluation clinique structurée</strong>
+              <span>Outils d'évaluation sémiologique avec génération de synthèse</span>
+            </div>
+          </li>
+          <li class="lp-feature-item">
+            <span class="lp-feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </span>
+            <div>
+              <strong>Analyse et synthèse clinique</strong>
+              <span>Systèmes intelligents de consolidation des données cliniques</span>
+            </div>
+          </li>
+          <li class="lp-feature-item">
+            <span class="lp-feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </span>
+            <div>
+              <strong>Formation professionnelle</strong>
+              <span>Ressources pédagogiques pour les professionnels de santé</span>
+            </div>
+          </li>
+          <li class="lp-feature-item">
+            <a href="./simulateurs/simulations.html" class="lp-feature-link" aria-label="Accéder à Psymulation — Simulateurs cliniques">
+              <span class="lp-feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+              </span>
+              <div>
+                <strong>Psymulation <span class="lp-new-badge">Nouveau</span></strong>
+                <span>Simulateurs avancés d'entretiens et de situations professionnelles</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ── CARTE DE VÉRIFICATION ──────────────────── -->
+    <section class="lp-access-section" id="acces" aria-labelledby="accessTitle">
+      <div class="lp-container">
+
+        <div class="lp-access-card" role="main">
+          <!-- Lueur de fond -->
+          <div class="lp-card-glow" aria-hidden="true"></div>
+
+          <!-- En-tête carte -->
+          <div class="lp-card-header">
+            <div class="lp-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div>
+              <h2 class="lp-card-title" id="accessTitle">Vérification d'accès</h2>
+              <p class="lp-card-subtitle">Réservé aux professionnels habilités</p>
+            </div>
+          </div>
+
+          <!-- Corps carte -->
+          <div class="lp-card-body">
+            <p class="lp-card-text">
+              L'accès à la plateforme est réservé aux professionnels de santé et aux étudiants
+              des filières médicales et paramédicales autorisés.
+            </p>
+
+            <!-- Checkbox -->
+            <div class="lp-check-wrap">
+              <label class="lp-checkbox-label" for="professionalCheck">
+                <input
+                  type="checkbox"
+                  id="professionalCheck"
+                  class="lp-checkbox"
+                  aria-required="true"
+                  onchange="updateAccessButton()"
+                />
+                <span class="lp-custom-check" aria-hidden="true">
+                  <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="lp-check-text">
+                  Je certifie être un professionnel de santé ou un étudiant autorisé à utiliser
+                  cet outil dans un cadre professionnel ou pédagogique.
+                </span>
+              </label>
+            </div>
+
+            <!-- Checkbox 2 : avertissement clinique -->
+            <div class="lp-check-wrap lp-check-warn">
+              <label class="lp-checkbox-label" for="disclaimerCheck">
+                <input
+                  type="checkbox"
+                  id="disclaimerCheck"
+                  class="lp-checkbox"
+                  aria-required="true"
+                  onchange="updateAccessButton()"
+                />
+                <span class="lp-custom-check" aria-hidden="true">
+                  <svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="lp-check-text lp-check-text-warn">
+                  <strong>⚠ Avertissement :</strong> Aucun outil numérique ne saurait se substituer à l’évaluation clinique réalisée par un professionnel qualifié. Les outils Psydiag ne possèdent pas de valeur diagnostique propre et ont pour seule vocation de soutenir la réflexion clinique, d’accompagner l’analyse des situations et d’éclairer la prise de décision du praticien.
+                </span>
+              </label>
+            </div>
+
+            <!-- CAPTCHA -->
+            <div class="lp-captcha-wrap" role="group" aria-labelledby="captchaLabel">
+              <div class="lp-captcha-header">
+                <span id="captchaLabel" class="lp-captcha-label">Vérification humaine</span>
+                <button
+                  type="button"
+                  class="lp-captcha-refresh"
+                  id="captchaRefresh"
+                  onclick="refreshCaptcha()"
+                  aria-label="Renouveler le CAPTCHA"
+                  title="Renouveler"
+                >
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/></svg>
+                </button>
+              </div>
+              <div class="lp-captcha-box">
+                <span class="lp-captcha-question" id="captchaQuestion" aria-live="polite">
+                  <!-- Généré par JS -->
+                </span>
+                <span class="lp-captcha-eq">=</span>
+                <input
+                  type="number"
+                  id="captchaAnswer"
+                  class="lp-captcha-input"
+                  placeholder="?"
+                  aria-label="Réponse au calcul de vérification"
+                  oninput="updateAccessButton()"
+                  autocomplete="off"
+                />
+              </div>
+              <p class="lp-captcha-hint" id="captchaHint" aria-live="polite"></p>
+            </div>
+
+            <!-- Bouton accès -->
+            <button
+              type="button"
+              class="lp-access-btn"
+              id="accessBtn"
+              disabled
+              aria-disabled="true"
+              onclick="handleAccess()"
+            >
+              <span class="lp-btn-glow" aria-hidden="true"></span>
+              <svg class="lp-btn-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z" clip-rule="evenodd"/></svg>
+              Accéder à Psydiag
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── TRANSITION OVERLAY ─────────────────────── -->
+    <div class="lp-transition-overlay" id="transitionOverlay" aria-hidden="true">
+      <div class="lp-transition-halo"></div>
+      <div class="lp-transition-text">
+        <div class="lp-loader">
+          <svg class="lp-spinner" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+            <circle class="lp-spinner-track" cx="25" cy="25" r="20" fill="none" stroke-width="4"/>
+            <circle class="lp-spinner-arc"   cx="25" cy="25" r="20" fill="none" stroke-width="4"
+                    stroke-dasharray="80 126" stroke-dashoffset="0"/>
+          </svg>
+        </div>
+        <span>Psydiag</span>
+      </div>
+    </div>
+
+    <!-- ── FOOTER ─────────────────────────────────── -->
+    <footer class="lp-footer" id="footer" role="contentinfo">
+      <div class="lp-container lp-footer-inner">
+        <p class="lp-footer-copy">
+          &copy; 2026 Psydiag &nbsp;—&nbsp;
+          Outil destiné aux professionnels de santé. Les informations fournies ne remplacent
+          ni le jugement clinique, ni les recommandations professionnelles en vigueur.
+        </p>
+        <nav class="lp-footer-links" aria-label="Liens légaux">
+          <a href="#" class="lp-footer-link">Mentions légales</a>
+          <a href="#" class="lp-footer-link">Politique de confidentialité</a>
+          <a href="#" class="lp-footer-link">Conditions d'utilisation</a>
+        </nav>
+        <p class="lp-visitor-count" id="visitorCount">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 12a4 4 0 100-8 4 4 0 000 8z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+          <span id="visitorCountValue">—</span> visites depuis le lancement
+        </p>
+      </div>
+    </footer>
+
+  </div><!-- /.landing-page -->
+
+  <script src="js/landing.js"></script>
+
+  <style>
+    /* ── Psymulation — lien feature actif ── */
+    .lp-feature-link {
+      display: flex;
+      align-items: flex-start;
+      gap: inherit;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      transition: opacity 0.2s ease;
+    }
+    .lp-feature-link:hover { opacity: 0.8; }
+    .lp-feature-link:hover strong { text-decoration: underline; }
+
+    .lp-new-badge {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 20px;
+      background: #2E6B8A;
+      color: #fff;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+  </style>
+
+<script>
+(function() {
+  var titleEl = document.querySelector('.lp-title-accent');
+  if (!titleEl) return;
+  titleEl.style.fontFamily = "'Elephant', 'Cinzel Decorative', serif";
+})();
+</script>
+
+<script>
+(function() {
+  var el = document.getElementById('visitorCountValue');
+  if (!el) return;
+  var NAMESPACE = 'psydiag-app';
+  var KEY = 'landing-visits';
+  fetch('https://api.countapi.xyz/hit/' + NAMESPACE + '/' + KEY)
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data && typeof data.value === 'number') {
+        el.textContent = data.value.toLocaleString('fr-FR');
+      } else {
+        el.textContent = '—';
+      }
+    })
+    .catch(function() {
+      el.textContent = '—';
+    });
+})();
+</script>
+</body>
+</html>
